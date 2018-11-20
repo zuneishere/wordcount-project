@@ -1,0 +1,15 @@
+<h1>There are {{ count }} words</h1>
+
+<h1>Full Text:</h1>
+<br />
+{{ fulltext}}
+
+<br />
+<h1>The number of items:</h1>
+<ul>
+{% for word,counttotal in sortedwords %}
+<li> {{word}} : {{counttotal}}</li>
+{% endfor  %}
+</ul>
+
+<a href="{% url 'home' %}"> Try again!</a> 
